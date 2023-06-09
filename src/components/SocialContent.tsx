@@ -48,7 +48,9 @@ export default function SocialContent() {
                     link="https://gist.github.com/Gondrak08/b082d3679f7ca9240d89ace8292a7854"
                 />
             </div>
-            <a href="#projects" className="
+            <a href="https://barao-tech.medium.com/" 
+            target="_blank"
+            className="
             relative
             top-2
             md:top-3  
