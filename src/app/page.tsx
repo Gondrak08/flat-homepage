@@ -21,8 +21,12 @@ export default function Home() {
             <About/>
             <SocialContent/>
             <Projects/> 
+            
         </section>
-      
+        <footer className="w-full h-full px-2 py-5 flex justify-center items-center text-gray-500" >
+                © 2023 Vitor Alecrim. All Rights Reserved.
+        </footer>
+            
     </main>
   )
 }
