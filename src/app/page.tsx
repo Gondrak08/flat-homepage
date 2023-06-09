@@ -34,7 +34,6 @@ export default function Home() {
         © 2023 Vitor Alecrim. All Rights Reserved.
       </footer>
 
-    
 
     </main>
   )
