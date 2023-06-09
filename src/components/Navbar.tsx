@@ -27,7 +27,7 @@ const Navbar = () => {
             transition-transitionBackground 
             transition-all 
             duration-500 
-          
+
             z-[100]
             ${
                 scrollPosition === 0 ? 'absolute ' : 
@@ -36,8 +36,10 @@ const Navbar = () => {
         `}>
             <nav className='
             flex 
-            items-center 
-            gap-5
+            items-center
+            animation
+            md:justify-center 
+            gap-10
             md:gap-20 
             py-2 
             transition-all 
@@ -45,7 +47,7 @@ const Navbar = () => {
             
             '
             >
-                <div>
+                <div className='w-[5em]  md:w-full md:h-full' >
                     <Logo />
                 </div>
                 <ul

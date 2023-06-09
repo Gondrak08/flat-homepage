@@ -1,13 +1,27 @@
 import { useRef, useEffect } from "react";
 
 
-export default function Wave() {
+export default function Wave({onWaveLoaded}) {
     const waveRef = useRef(null);
 
     useEffect(()=>{
         waveRef.current.beginElement();
     },[]);
 
+    useEffect(()=>{
+        const onAnimationEnd=()=>{
+            onWaveLoaded()
+        };
+
+        waveRef.current.addEventListener("animationend", onAnimationEnd);
+
+        return () =>{
+            waveRef.current.removeEventListener("animationend", onAnimationEnd)
+        }
+
+    },[onWaveLoaded()])
+
+   
     return (
         <svg width="100%" height="172" fill="none" xmlns="http://www.w3.org/2000/svg" className="svg" >
             <path fill="currentColor">

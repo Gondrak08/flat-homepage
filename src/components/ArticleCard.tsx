@@ -13,7 +13,7 @@ export default function ArticleCard({ title, description, image, link }: IArticl
                     <img src={image} alt={title} />
                 </div>
                 <div className="p-2" >
-                <h4 className="text-sm" >{title}</h4>
+                <h4 className="text-sm md:text-[15px]" >{title}</h4>
                 {description && (<p>{description}</p>)}
                 </div>
             </a>
