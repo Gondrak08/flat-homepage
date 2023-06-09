@@ -14,7 +14,7 @@ export default function Hero() {
             flex justify-center gap-5 md:gap-8 w-fit mx-auto items-center   h-2/4" >
 
                 <div id="avatar" className="w-[10em] md:w-48 h-[10em] md:h-48 rounded-full border-2 ">
-                    <img src="./avatar.jpg" className="rounded-full w-full h-full object-contain " alt="A picture of myself" />
+                    <Image src="/avatar.jpg" className="rounded-full w-full h-full object-contain " alt="A picture of myself" width={"100"} height={"100"} />
                 </div>
 
                 <div className=" mx-auto text-center text-white" >

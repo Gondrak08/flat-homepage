@@ -8,7 +8,7 @@ interface IArticleCard {
 export default function ArticleCard({ title, description, image, link }: IArticleCard) {
     return (
         <div id="article-card">
-            <a className="flex flex-col gap-2 w-fit hover:shadow"  href={link} target="_blank" rel="noopener noreferrer">
+            <a className="flex flex-col gap-2 w-fit shadow-xl hover:shadow-2xl"  href={link} target="_blank" rel="noopener noreferrer">
                 <div className="image-container" >
                     <img src={image} alt={title} />
                 </div>

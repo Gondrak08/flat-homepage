@@ -28,7 +28,7 @@ const Navbar = () => {
             transition-all 
             duration-500 
           
-            z-50
+            z-[100]
             ${
                 scrollPosition === 0 ? 'absolute ' : 
                 scrollPosition !==0 && 'shadow-xl bg-background fixed  z-50 '
@@ -42,6 +42,7 @@ const Navbar = () => {
             py-2 
             transition-all 
             duration-500
+            
             '
             >
                 <div>
