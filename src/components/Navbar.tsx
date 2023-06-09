@@ -27,7 +27,6 @@ const Navbar = () => {
             transition-transitionBackground 
             transition-all 
             duration-500 
-
             z-[100]
             ${
                 scrollPosition === 0 ? 'absolute ' : 
@@ -65,13 +64,13 @@ const Navbar = () => {
                     "
                 >
                     <li>
-                        <a href='' className={linkeStyle}> About</a>
+                        <a href='#about' className={linkeStyle}> About</a>
                     </li>
                     <li>
-                        <a href='' className={linkeStyle}> Works</a>
+                        <a href='#projects' className={linkeStyle}> Works</a>
                     </li>
                     <li>
-                        <a href='' className={linkeStyle}> Contact</a>
+                        <a href='#social-contact' className={linkeStyle}> Contact</a>
                     </li>
                 </ul>
             </nav>

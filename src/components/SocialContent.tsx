@@ -3,7 +3,7 @@ import ArticleCard from './ArticleCard';
 
 export default function SocialContent() {
     return (
-        <section id="social-container" className='animation w-full h-fit flex flex-col gap-2 py-10 px-5 md:px-0' >
+        <section id="social-contact" className='animation w-full h-fit flex flex-col gap-2 py-10 px-5 md:px-0' >
             <h3 className=" text-xl md:text-2xl font-bold underline underline-offset-4">
                 On the web
             </h3>
