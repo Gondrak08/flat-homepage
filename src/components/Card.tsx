@@ -25,8 +25,8 @@ export default function Card({ title, description, image, stacks, link, repo }: 
                     {description && (<p className='text-sm md:text-[14px] font-justify' >{description}</p>)}
                 </div>
                 <div className='p-2 md:px-4 md:pb-5 w-full flex flex-wrap items-center justify-start gap-2 text-[12px]' >
-                    {stacks && stacks.map((stack) => {
-                        return <span className='py-1 px-2 border border-gray-400 hover:bg-black 
+                    {stacks && stacks.map((stack:string, index:number) => {
+                        return <span key={index} className='py-1 px-2 border border-gray-400 hover:bg-black 
                         hover:text-white rounded-sm' >{stack}</span>
                     })}
                 </div>
