@@ -7,18 +7,24 @@ interface ICard {
     stacks: string[]
     link: string,
     repo: string | null
-}
+};
 
 
-export default function Card({ title, description, image, stacks, link, repo }: ICard) {
-    
+
+export default function Card({ 
+    title, 
+    description, 
+    image, 
+    stacks, 
+    link, 
+    repo }: ICard) {
     return (
         <div id="card">
             <a className="flex  flex-col gap-2 w-full shadow-md 
             hover:shadow-2xl rounded-xl" href={link.length > 0  ? link : repo ?? ''} target="_blank" rel="noopener noreferrer">
-                <div className="image-container z-10" >
-                    <Image src={`/` +  image}  alt={title} 
-                     className="rounded-t-md" width="100" height="100" />
+                <div className="image-container relative z-10" >
+                    <Image src={`/` +  image}  alt={title} layout="fill" quality={100}  
+                     className="rounded-t-md object-contain"  />
                 </div>
                 <div className="p-2 md:px-4 flex flex-col gap-1" >
                     <h4 className="text-[14px] md:text-lg" >{title}</h4>
@@ -32,6 +38,5 @@ export default function Card({ title, description, image, stacks, link, repo }: 
                 </div>
             </a>
         </div>
-    )
-
-}
+    );
+};
