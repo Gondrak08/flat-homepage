@@ -1,0 +1,18 @@
+{
+    "Hero":{
+        "title":"Vitor Alecrim",
+        "subtitle":"A indie Full Stack Developer"
+    },
+    "About":{
+        "title":"About Me",
+        "text":"Vitor is a freelancer and a passionate full-stack developer with a keen eye for bridging technology and art. With a strong focus on understanding client needs and requirements, he is dedicated to crafting visually stunning and user-friendly websites and applications",
+        "button":"My Projects"
+    },
+    "Social":{
+        "title":"On the web",
+        "button":"Read more..."
+    },
+    "Projects":{
+        "title":"Projects"
+    }
+}

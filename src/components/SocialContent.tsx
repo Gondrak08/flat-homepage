@@ -1,11 +1,13 @@
+import { useTranslations } from "next-intl";
 import { AiFillGithub, AiFillTwitterCircle, AiFillLinkedin } from 'react-icons/ai';
 import ArticleCard from './ArticleCard';
 
 export default function SocialContent() {
+    const t = useTranslations("Social")
     return (
         <section id="social-contact" className='animation w-full h-fit flex flex-col gap-2 py-10 px-5 md:px-0' >
             <h3 className=" text-xl md:text-2xl font-bold underline underline-offset-4">
-                On the web
+                {t('title')}
             </h3>
             <div id="social-links" className='flex flex-wrap items-center justify-start gap-5' >
                 <a className='flex items-center justify-center gap-1 hover:underline underline-offset-4 '
@@ -63,7 +65,7 @@ export default function SocialContent() {
             hover:underline
             underline-offset-4
             " >
-                More articles ...
+               {t('button')}
             </a>
         </section>
     )

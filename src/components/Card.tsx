@@ -9,8 +9,6 @@ interface ICard {
     repo: string | null
 };
 
-
-
 export default function Card({ 
     title, 
     description, 
@@ -40,3 +38,4 @@ export default function Card({
         </div>
     );
 };
+

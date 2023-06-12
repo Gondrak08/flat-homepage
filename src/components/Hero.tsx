@@ -1,6 +1,8 @@
+import { useTranslations } from "next-intl";
 import Image from 'next/image';
-
 export default function Hero() {
+    const t = useTranslations("Hero");
+
     return (
         <section id="hero-container"
             className="relative flex box-border min-h-[550px] md:min-h-[600px]  w-full flex-col justify-between aling-center"
@@ -20,10 +22,10 @@ export default function Hero() {
 
                 <div className="animation mx-auto text-center text-white" >
                     <div>
-                        <h1 className="text-2xl md:text-5xl font-medium HeroH1">Vitor Alecrim</h1>
+                        <h1 className="text-2xl md:text-5xl font-medium HeroH1">{t('title')}</h1>
                         <p className="my-1 text-xl md:text-2xl  text-opacity-0  HeroP text-center" style={{
                             color: 'hsla(0,0%,100%,.8)',
-                        }} >A indie Fullstack Developer</p>
+                        }} >{t("subtitle")}</p>
                     </div>
                     <div className="flex flex-wrap gap-2 items-center justify-center " >
                         <Image alt="react" src="/logo-react.png" width="35" height="100" />
