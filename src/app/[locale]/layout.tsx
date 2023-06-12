@@ -1,9 +1,11 @@
 // 'use client'
+//translations page
 import { NextIntlClientProvider} from 'next-intl';
 import {notFound} from 'next/navigation';
-
+//
 import '../globals.css'
 import { Inter } from 'next/font/google'
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -33,8 +35,9 @@ export default async function RootLayout({
  
   return (
     <html lang={locale}>
-      
+       
       <body className={inter.className}>
+        
         <NextIntlClientProvider locale={locale}  messages={translations} >
           {children}
         </NextIntlClientProvider>

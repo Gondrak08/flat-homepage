@@ -1,6 +1,6 @@
 'use client';
 import { useState } from "react";
-
+import { DefaultSeo } from "next-seo";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Wave from '@/components/Wave';
@@ -16,6 +16,21 @@ export default function Home() {
     <main className={`flex min-h-screen  relative flex-col items-center justify-between 
       ${!waveLoad ? 'invisible' : 'visible'}
     `}>
+      <DefaultSeo
+        title="Flat-CO"
+        description="Vitor Alecrim personal website"
+        openGraph={{
+          images: [
+            {
+              url: 'https://www.test.ie/images/cover.jpg',
+              width: 850,
+              height: 650,
+              alt: 'Photo of text',
+            }
+          ],
+          site_name: 'flat-co'
+        }}
+      />
       <header className="w-full h-fit  relative">
         <Navbar />
         <Hero />
@@ -24,7 +39,7 @@ export default function Home() {
         </div>
       </header>
       <section className=" container mx-auto  h-full relative z-50 ">
-       
+
         <About />
         <SocialContent />
         <Projects />
