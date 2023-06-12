@@ -11,6 +11,20 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'Flat-co',
   description: 'created by @VitorAlecrim',
+  openGraph: {
+    title: 'Flat-co',
+    description: 'Vitor Alecrim personal Website',
+    url: 'https://flat-co.netlify.app/',
+    siteName: 'Flat-co',
+    images: [
+      {
+        url: '../../../public/logo.gif',
+        width: 800,
+        height: 600,
+      },
+    ],
+   
+  },
 };
 
 export function generateStaticParams(){
