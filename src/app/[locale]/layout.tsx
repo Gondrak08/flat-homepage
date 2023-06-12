@@ -1,5 +1,5 @@
 // 'use client'
-import {useLocale, NextIntlClientProvider} from 'next-intl';
+import { NextIntlClientProvider} from 'next-intl';
 import {notFound} from 'next/navigation';
 
 import '../globals.css'

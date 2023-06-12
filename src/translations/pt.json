@@ -1,4 +1,9 @@
 {
+    "Navbar":{
+        "about":"Sobre",
+        "works":"Projetos",
+        "contact":"Contato"
+    },
     "Hero":{
         "title":"Vitor Alecrim",
         "subtitle":"A indie Full Stack Developer"

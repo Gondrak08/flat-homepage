@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslations } from "next-intl";
 import Logo from './Logo';
 
 const Navbar = () => {
     const [scrollPosition, setScrollPosition] = useState<number>(0);
     const linkeStyle = 'hover:text-gray-light hover:underline underline-offset-4'
-
+    const t = useTranslations("Navbar")
     useEffect(() => {
         window.addEventListener('scroll', handleScroll, { passive: true });
         return () => {
@@ -28,9 +29,8 @@ const Navbar = () => {
             transition-all 
             duration-500 
             z-[100]
-            ${
-                scrollPosition === 0 ? 'absolute ' : 
-                scrollPosition !==0 && 'shadow-xl bg-background fixed  z-50 '
+            ${scrollPosition === 0 ? 'absolute ' :
+                scrollPosition !== 0 && 'shadow-xl bg-background fixed  z-50 '
             }
         `}>
             <nav className='
@@ -64,13 +64,13 @@ const Navbar = () => {
                     "
                 >
                     <li>
-                        <a href='#about' className={linkeStyle}> About</a>
+                        <a href='#about' className={linkeStyle}>{t("about")}</a>
                     </li>
                     <li>
-                        <a href='#projects' className={linkeStyle}> Works</a>
+                        <a href='#projects' className={linkeStyle}> {t("works")}</a>
                     </li>
                     <li>
-                        <a href='#social-contact' className={linkeStyle}> Contact</a>
+                        <a href='#social-contact' className={linkeStyle}> {t("contact")}</a>
                     </li>
                 </ul>
             </nav>
