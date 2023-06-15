@@ -1,6 +1,7 @@
 {
     "Navbar":{
         "about":"Sobre",
+        "articles":"Artigos",
         "works":"Projetos",
         "contact":"Contato"
     },
@@ -19,5 +20,8 @@
     },
     "Projects":{
         "title":"Projetos"
+    },
+    "Articles":{
+        "title":"Artigos"
     }
 }

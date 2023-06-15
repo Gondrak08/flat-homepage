@@ -1,6 +1,7 @@
 {
     "Navbar":{
         "about":"About",
+        "articles":"Posts",
         "works":"Projects",
         "contact":"Contact"
     },
@@ -19,5 +20,8 @@
     },
     "Projects":{
         "title":"Projects"
+    },
+    "Articles":{
+        "title":"Articles"
     }
 }

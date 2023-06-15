@@ -1,7 +1,8 @@
 // 'use client'
+import Header from '@/components/Header';
 //translations page
-import { NextIntlClientProvider} from 'next-intl';
-import {notFound} from 'next/navigation';
+import { NextIntlClientProvider } from 'next-intl';
+import { notFound } from 'next/navigation';
 //
 import '../globals.css'
 import { Inter } from 'next/font/google'
@@ -23,39 +24,44 @@ export const metadata = {
         height: 600,
       },
     ],
-   
+
   },
 };
 
-export function generateStaticParams(){
-  return [{locale:'en'}, {locale:'pt'}];
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'pt' }];
 };
 
 
 export default async function RootLayout({
   children,
-  params:{locale}
+  params: { locale }
 }: {
   children: React.ReactNode,
-  params:any
+  params: any
 }) {
 
   let translations;
-  try{
+  try {
     translations = (await import(`../../translations/${locale}.json`)).default
-  } catch(err){
+  } catch (err) {
     notFound()
   }
- 
+
+  var headerLoaded = false
+
   return (
     <html lang={locale}>
-       
-      <body className={inter.className}>
-        
-        <NextIntlClientProvider locale={locale}  messages={translations} >
+      <body className={`${inter.className},${!headerLoaded ? 'invisible' : 'visible'}`}>
+        <NextIntlClientProvider locale={locale} messages={translations} >
+          <Header onLoaded={headerLoaded} />
           {children}
         </NextIntlClientProvider>
-        </body>
+        <footer className="w-full h-full px-2 py-5 flex 
+        justify-center items-center text-gray-500" >
+          © 2023 Vitor Alecrim. All Rights Reserved.
+        </footer>
+      </body>
     </html>
   )
 }

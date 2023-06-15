@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import Link from "next/link";
+
 import { useTranslations } from "next-intl";
 import Logo from './Logo';
 
 const Navbar = () => {
     const [scrollPosition, setScrollPosition] = useState<number>(0);
     const linkeStyle = 'hover:text-gray-light hover:underline underline-offset-4'
-    const t = useTranslations("Navbar")
+    const t = useTranslations("Navbar");
+
     useEffect(() => {
         window.addEventListener('scroll', handleScroll, { passive: true });
         return () => {
@@ -43,7 +47,6 @@ const Navbar = () => {
             py-2 
             transition-all 
             duration-500
-            
             '
             >
                 <div className='w-[5em]  md:w-full md:h-full' >
@@ -60,17 +63,21 @@ const Navbar = () => {
                     text-md
                     md:text-2xl
                     text-bold
-                    
+                
                     "
+
                 >
+                    {/* <li>
+                        <Link href='#about' className={linkeStyle}>{t("about")}</Link>
+                    </li> */}
                     <li>
-                        <a href='#about' className={linkeStyle}>{t("about")}</a>
+                        <Link href='/posts' className={linkeStyle}>{t("articles")}</Link>
                     </li>
                     <li>
-                        <a href='#projects' className={linkeStyle}> {t("works")}</a>
+                        <Link href='#projects' className={linkeStyle}> {t("works")}</Link>
                     </li>
                     <li>
-                        <a href='#social-contact' className={linkeStyle}> {t("contact")}</a>
+                        <Link href='#social-contact' className={linkeStyle}> {t("contact")}</Link>
                     </li>
                 </ul>
             </nav>
