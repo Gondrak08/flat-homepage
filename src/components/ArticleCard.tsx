@@ -3,7 +3,7 @@ export interface IArticleCard {
     description: string | null,
     image: string,
     link: string,
-}
+};
 
 export default function ArticleCard({ title, description, image, link }: IArticleCard) {
     return (
