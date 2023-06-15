@@ -16,7 +16,7 @@ export default function Wave({onWaveLoaded}) {
         waveRef.current.addEventListener("animationend", onAnimationEnd);
 
         return () =>{
-            waveRef.current.removeEventListener("animationend", onAnimationEnd)
+            waveRef.current?.removeEventListener("animationend", onAnimationEnd)
         }
 
     },[onWaveLoaded()])
