@@ -1,13 +1,11 @@
 'use client';
 import { useState } from "react";
-import { DefaultSeo, NextSeo } from "next-seo";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Wave from '@/components/Wave';
 import About from "@/components/About";
 import SocialContent from "@/components/SocialContent";
 import Projects from "@/components/Projects";
-
 
 export default function Home() {
   const [waveLoad, setWaveLoad] = useState<Boolean>(false);

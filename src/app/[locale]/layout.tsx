@@ -18,7 +18,7 @@ export const metadata = {
     siteName: 'Flat-co',
     images: [
       {
-        url: '../../../public/logo.gif',
+        url: '../logo.gif',
         width: 800,
         height: 600,
       },
