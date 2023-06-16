@@ -61,9 +61,7 @@ const Navbar = () => {
                     text-md
                     md:text-2xl
                     text-bold
-                
                     "
-
                 >
                     {/* <li>
                         <Link href='#about' className={linkeStyle}>{t("about")}</Link>
@@ -77,21 +75,21 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link
-                            href={{pathname:"/",hash:"projects"}}
-                            as="/#projects"
+                        <a
+                            href={"#projects"}
+                          
                             about='my personal projects'
                             className={linkeStyle}>
                             {t("works")}
-                        </Link>
+                        </a>
                     </li>
                     <li>
-                        <Link href={{pathname:"/", hash:"social-contact"}}
-                        as="/#social-contact"
+                        <a href="/#social-contact"
+                      
                             about='my personal contacts'
                             className={linkeStyle}>
                             {t("contact")}
-                        </Link>
+                        </a>
                     </li>
                 </ul>
             </nav>
