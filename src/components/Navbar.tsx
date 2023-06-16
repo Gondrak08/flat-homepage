@@ -79,6 +79,7 @@ const Navbar = () => {
                     <li>
                         <Link
                             href={{pathname:"/",hash:"projects"}}
+                            as="/#projects"
                             about='my personal projects'
                             className={linkeStyle}>
                             {t("works")}
@@ -86,6 +87,7 @@ const Navbar = () => {
                     </li>
                     <li>
                         <Link href={{pathname:"/", hash:"social-contact"}}
+                        as="/#social-contact"
                             about='my personal contacts'
                             className={linkeStyle}>
                             {t("contact")}
