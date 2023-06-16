@@ -73,22 +73,28 @@ const Navbar = () => {
                             href='/posts'
                             about='my articles'
                             className={linkeStyle}>
+                            <a>
                             {t("articles")}
+                            </a>
                         </Link>
                     </li>
                     <li>
-                        <a
-                            href='/#projects'
+                        <Link
+                            href={{pathname:"",hash:"projects"}}
                             about='my personal projects'
                             className={linkeStyle}>
-                            {t("works")}
-                        </a>
+                            <a>
+                                {t("works")}
+                            </a>
+                        </Link>
                     </li>
                     <li>
                         <Link href={{pathname:"/", hash:"social-contact"}}
                             about='my personal contacts'
                             className={linkeStyle}>
-                            {t("contact")}
+                            <a>
+                                {t("contact")}
+                            </a>
                         </Link>
                     </li>
                 </ul>
