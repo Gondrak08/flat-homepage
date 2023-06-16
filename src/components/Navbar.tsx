@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 import Link from "next/link";
-
 import { useTranslations } from "next-intl";
 import Logo from './Logo';
 
@@ -33,7 +31,7 @@ const Navbar = () => {
             transition-all 
             duration-500 
             z-[100]
-            ${scrollPosition === 0 ? 'absolute ' :
+            ${scrollPosition === 0 ? 'absolute  ' :
                 scrollPosition !== 0 && 'shadow-xl bg-background fixed  z-50 '
             }
         `}>
@@ -49,7 +47,7 @@ const Navbar = () => {
             duration-500
             '
             >
-                <div className='w-[5em]  md:w-full md:h-full' >
+                <div className='hidden md:flex  md:w-full md:h-full' >
                     <Logo />
                 </div>
                 <ul
@@ -57,7 +55,7 @@ const Navbar = () => {
                     className="
                     flex 
                     items-center 
-                    gap-3
+                    gap-12
                     md:gap-14  
                     text-white
                     text-md
@@ -71,13 +69,27 @@ const Navbar = () => {
                         <Link href='#about' className={linkeStyle}>{t("about")}</Link>
                     </li> */}
                     <li>
-                        <Link href='/posts' className={linkeStyle}>{t("articles")}</Link>
+                        <Link 
+                            href='/posts'
+                            about='my articles'
+                            className={linkeStyle}>
+                            {t("articles")}
+                        </Link>
                     </li>
                     <li>
-                        <Link href='#projects' className={linkeStyle}> {t("works")}</Link>
+                        <a
+                            href='#projects'
+                            about='my personal projects'
+                            className={linkeStyle}>
+                            {t("works")}
+                        </a>
                     </li>
                     <li>
-                        <Link href='#social-contact' className={linkeStyle}> {t("contact")}</Link>
+                        <Link href='#social-contact'
+                            about='my personal contacts'
+                            className={linkeStyle}>
+                            {t("contact")}
+                        </Link>
                     </li>
                 </ul>
             </nav>

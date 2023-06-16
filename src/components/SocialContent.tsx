@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { AiFillGithub, AiFillTwitterCircle, AiFillLinkedin } from 'react-icons/ai';
 import ArticleCard from './ArticleCard';
@@ -5,7 +6,7 @@ import ArticleCard from './ArticleCard';
 export default function SocialContent() {
     const t = useTranslations("Social")
     return (
-        <section id="social-contact" className='animation w-full h-fit flex flex-col gap-2 py-10 px-5 md:px-0' >
+        <section className='animation w-full h-fit flex flex-col gap-2 py-10 px-5 md:px-0' >
             <h3 className=" text-xl md:text-2xl font-bold underline underline-offset-4">
                 {t('title')}
             </h3>
@@ -51,23 +52,24 @@ export default function SocialContent() {
                 />
 
             </div>
-            <a href="https://barao-tech.medium.com/"
-                target="_blank"
+            <div id="social-contact" className="invisible" />
+            <Link
+                href={{pathname:"/posts"}}
                 className="
-            relative
-            top-2
-            md:top-3  
-            px-5
-            py-1 
-            place-self-start 
-            w-fit font-semibold 
-            text-black 
-            transition duration-300 
-            hover:underline
-            underline-offset-4
+                    relative
+                    top-2
+                    md:top-3  
+                    px-5
+                    py-1 
+                    place-self-start 
+                    w-fit font-semibold 
+                    text-black 
+                    transition duration-300 
+                    hover:underline
+                    underline-offset-4
             " >
                 {t('button')}
-            </a>
+            </Link>
         </section>
     )
 }

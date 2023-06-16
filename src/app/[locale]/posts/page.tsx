@@ -15,7 +15,7 @@ export default function Posts(){
     },[articles])
 
     return(
-          <section className={` ${isheaderLodad?"visible":'invisible'}
+          <section id="articles" className={` ${isheaderLodad?"visible":'invisible'}
            container animation mx-auto  h-full relative z-50 `}>
             <h3 className=" text-xl md:text-2xl font-bold underline
              underline-offset-4 text-black" >{t("title")}
