@@ -55,7 +55,7 @@ export default async function RootLayout({
       <body className={`${inter.className}`}>
         <NextIntlClientProvider locale={locale} messages={translations} >
           <GlobalContextProvider>
-            {/* <Header /> */}
+            <Header />
             {/* <main className={`flex min-h-screen  relative flex-col
              items-center justify-between `} > */}
               {children}
