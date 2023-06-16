@@ -76,8 +76,7 @@ const Navbar = () => {
                     </li>
                     <li>
                         <a
-                            href={"#projects"}
-                          
+                            href="/#projects"
                             about='my personal projects'
                             className={linkeStyle}>
                             {t("works")}

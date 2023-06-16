@@ -6,7 +6,7 @@ import ArticleCard from './ArticleCard';
 export default function SocialContent() {
     const t = useTranslations("Social")
     return (
-        <section className='animation w-full h-fit flex flex-col gap-2 py-10 px-5 md:px-0' >
+        <section id="social-contact" className='animation w-full h-fit flex flex-col gap-2 py-10 px-5 md:px-0' >
             <h3 className=" text-xl md:text-2xl font-bold underline underline-offset-4">
                 {t('title')}
             </h3>
@@ -27,6 +27,7 @@ export default function SocialContent() {
                     @vitor-alecim
                 </a>
             </div>
+          
             <div id="blog-articles" className='mt-2 grid grid-cols-2 md:grid-cols-3 gap-2 items-start justify-center' >
                 <ArticleCard
                     key={1}
@@ -52,7 +53,7 @@ export default function SocialContent() {
                 />
 
             </div>
-            <div id="social-contact" className="invisible" />
+          
             <Link
                 href={{pathname:"/posts"}}
                 className="
