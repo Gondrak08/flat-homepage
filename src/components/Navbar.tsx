@@ -78,14 +78,14 @@ const Navbar = () => {
                     </li>
                     <li>
                         <a
-                            href='#projects'
+                            href='/#projects'
                             about='my personal projects'
                             className={linkeStyle}>
                             {t("works")}
                         </a>
                     </li>
                     <li>
-                        <Link href='#social-contact'
+                        <Link href='/#social-contact'
                             about='my personal contacts'
                             className={linkeStyle}>
                             {t("contact")}
