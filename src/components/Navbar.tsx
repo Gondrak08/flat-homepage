@@ -78,7 +78,7 @@ const Navbar = () => {
                     </li>
                     <li>
                         <Link
-                            href={{pathname:"",hash:"projects"}}
+                            href={{pathname:"/",hash:"projects"}}
                             about='my personal projects'
                             className={linkeStyle}>
                             {t("works")}
