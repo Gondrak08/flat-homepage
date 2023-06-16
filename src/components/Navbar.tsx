@@ -85,7 +85,7 @@ const Navbar = () => {
                         </a>
                     </li>
                     <li>
-                        <Link href='/#social-contact'
+                        <Link href={{pathname:"/", hash:"social-contact"}}
                             about='my personal contacts'
                             className={linkeStyle}>
                             {t("contact")}
