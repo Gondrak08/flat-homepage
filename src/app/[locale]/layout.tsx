@@ -1,11 +1,13 @@
-// 'use client'
-import Header from '@/components/Header';
+// 'RootLayout'
+// context
+import { GlobalContextProvider } from '../context/store';
 //translations page
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 //
 import '../globals.css'
 import { Inter } from 'next/font/google'
+import Header from '@/components/Header';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -48,14 +50,14 @@ export default async function RootLayout({
     notFound()
   }
 
-  var headerLoaded = false
-
   return (
     <html lang={locale}>
-      <body className={`${inter.className},${!headerLoaded ? 'invisible' : 'visible'}`}>
+      <body className={`${inter.className}`}>
         <NextIntlClientProvider locale={locale} messages={translations} >
-          <Header onLoaded={headerLoaded} />
+          <GlobalContextProvider>
+          <Header />
           {children}
+          </GlobalContextProvider>
         </NextIntlClientProvider>
         <footer className="w-full h-full px-2 py-5 flex 
         justify-center items-center text-gray-500" >

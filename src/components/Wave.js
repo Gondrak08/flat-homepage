@@ -1,6 +1,5 @@
 import { useRef, useEffect } from "react";
 
-
 export default function Wave({onWaveLoaded}) {
     const waveRef = useRef(null);
 
