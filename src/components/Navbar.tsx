@@ -76,16 +76,16 @@ const Navbar = () => {
                     </li>
                     <li>
                         <Link
-                            href={{pathname:'/', hash:"#projects"}}
-                            as={"#projects"}
+                            href={{pathname:'/', hash:"projects"}}
+                            as={{hash:"projects"}}
                             about='my personal projects'
                             className={linkeStyle}>
                            {t("works")}
                         </Link>
                     </li>
                     <li>
-                        <Link href={{pathname:'/', hash:"#social-contact"}}
-                        as={"#social-contact"}
+                        <Link href={{pathname:'/', hash:"social-contact"}}
+                        as={{hash:"social-contact"}}
                             about='my personal contacts'
                             className={linkeStyle}>
                         
