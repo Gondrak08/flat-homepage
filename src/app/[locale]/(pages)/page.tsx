@@ -6,7 +6,7 @@ import Posts from "./posts/page";
 export default function Index() {
 
   return (<>
-          <Header />
+      
             <main className={`flex min-h-screen  relative flex-col
              items-center justify-between `} >
            

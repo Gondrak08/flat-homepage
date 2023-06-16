@@ -75,20 +75,22 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li>
-                        <a
-                            href="/#projects"
+                        <Link
+                            href={{pathname:'', hash:"#projects"}}
                             about='my personal projects'
                             className={linkeStyle}>
-                            {t("works")}
-                        </a>
+                           {t("works")}
+                        </Link>
                     </li>
                     <li>
-                        <a href="/#social-contact"
-                      
+                        <Link href={{pathname:'', hash:"#social-contact"}}
+                        as={"/#social-contact"}
                             about='my personal contacts'
                             className={linkeStyle}>
+                        
                             {t("contact")}
-                        </a>
+                        
+                        </Link>
                     </li>
                 </ul>
             </nav>
