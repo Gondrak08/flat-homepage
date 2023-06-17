@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { usePathname, useRouter } from 'next/navigation';
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import Logo from './Logo';
@@ -9,8 +8,6 @@ const Navbar = () => {
     const linkeStyle = 'hover:text-gray-light hover:underline underline-offset-4'
     const t = useTranslations("Navbar");
 
-    const router = useRouter()
-    
     useEffect(() => {
         window.addEventListener('scroll', handleScroll, { passive: true });
         return () => {
@@ -22,7 +19,6 @@ const Navbar = () => {
         const position: number = window.pageYOffset;
         setScrollPosition(position);
     };
-
 
     return (
         <section className={`
@@ -78,22 +74,22 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li>
-                        <button
-                            onClick={()=>router.push("/#projects")}
+                        <Link
+                            href={{pathname:"/", hash:"projects"}}
+                            as={{pathname:"/", hash:"projects"}}
+                            prefetch={true}
                             className={linkeStyle}>
-                            
                             {t("works")}
-                        </button>
+                        </Link>
                     </li>
                     <li>
-                        <button 
-                            
-                            onClick={()=>router.push("/#social-contacts")}
-
+                        <Link 
+                            href={{pathname:"/", hash:"social-contacts"}}
+                            as={{pathname:"/", hash:"social-contacts"}}
+                            prefetch={true}         
                             className={linkeStyle}>
                             {t("contact")}
-
-                        </button>
+                        </Link>
                     </li>
                 </ul>
             </nav>
