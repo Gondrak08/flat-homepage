@@ -1,10 +1,9 @@
 
 import PageLayout from './layout'
-import Home from "./(home)/page";
+import Home from "./home/page";
 
 import Posts from "./posts/page";
-export default function Index() {
-
+export default function Main() {
   return (<>
        
             <main className={`flex min-h-screen  relative flex-col
