@@ -74,21 +74,24 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link
-                            href={{pathname:"/", hash:"projects"}}
-                            as={{pathname:"/", hash:"projects"}}
+                        <a
+                            href="/#projects"
                             className={linkeStyle}>
                             {t("works")}
-                        </Link>
+                        </a>
                     </li>
                     <li>
-                        <Link 
+                        <a href='/#social-contact'>
+                            {t("contact")}
+
+                        </a>
+                        {/* <Link 
                             href={{pathname:"/", hash:"social-contact"}}
                             as={{pathname:"/", hash:"social-contact"}}
                             className={linkeStyle}>
                             {t("contact")}
                             
-                        </Link>
+                        </Link> */}
                     </li>
                 </ul>
             </nav>
