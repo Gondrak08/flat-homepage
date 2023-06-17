@@ -20,20 +20,6 @@ const Navbar = () => {
         setScrollPosition(position);
     };
 
-
-    const [navClick, setNavClick] = useState(false);
-
-    useEffect(() => {
-      setTimeout(() => {
-        const hash = window.location.hash;
-        if (hash){ document.querySelector(hash)?.scrollIntoView()};
-      }, 0);
-    }, [navClick])
-  
-    const toggleNavClick = () => setNavClick((oldVal) => !oldVal);
-
-
-
     return (
         <section className={`
             flex 
@@ -91,20 +77,17 @@ const Navbar = () => {
                         <Link
                             href={{pathname:"/", hash:"projects"}}
                             as={{pathname:"/", hash:"projects"}}
-                            onClick={toggleNavClick}
-                            prefetch={true}
                             className={linkeStyle}>
                             {t("works")}
                         </Link>
                     </li>
                     <li>
                         <Link 
-                            href={{pathname:"/", hash:"social-contacts"}}
-                            as={{pathname:"/", hash:"social-contacts"}}
-                            onClick={toggleNavClick}
-                            prefetch={true}         
+                            href={{pathname:"/", hash:"social-contact"}}
+                            as={{pathname:"/", hash:"social-contact"}}
                             className={linkeStyle}>
                             {t("contact")}
+                            
                         </Link>
                     </li>
                 </ul>

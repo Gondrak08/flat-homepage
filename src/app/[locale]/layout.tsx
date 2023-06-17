@@ -56,10 +56,10 @@ export default async function RootLayout({
         <NextIntlClientProvider locale={locale} messages={translations} >
           <GlobalContextProvider>
             <Header />
-            {/* <main className={`flex min-h-screen  relative flex-col
-             items-center justify-between `} > */}
+            <main className={`flex min-h-screen  relative flex-col
+             items-center justify-between `} >
               {children}
-            {/* </main> */}
+            </main>
           </GlobalContextProvider>
         </NextIntlClientProvider>
         <footer className="w-full h-full px-2 py-5 flex 
