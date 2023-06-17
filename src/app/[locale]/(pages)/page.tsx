@@ -1,6 +1,7 @@
 'use client'
+
 import PageLayout from './layout'
-import Home from "./home/page";
+import Home from "./[home]/page";
 
 import Posts from "./posts/page";
 export default function Main() {

@@ -79,7 +79,7 @@ const Navbar = () => {
                     </li>
                     <li>
                         <button
-                            onClick={()=>router.push("/home#projects")}
+                            onClick={()=>router.push("/#projects")}
                             className={linkeStyle}>
                             
                             {t("works")}
@@ -88,7 +88,7 @@ const Navbar = () => {
                     <li>
                         <button 
                             
-                            onClick={()=>router.push("/home#social-contacts")}
+                            onClick={()=>router.push("/#social-contacts")}
 
                             className={linkeStyle}>
                             {t("contact")}
