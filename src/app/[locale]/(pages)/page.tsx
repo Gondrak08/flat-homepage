@@ -1,4 +1,4 @@
-
+'use client'
 import PageLayout from './layout'
 import Home from "./home/page";
 

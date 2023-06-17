@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import Logo from './Logo';
@@ -9,7 +9,7 @@ const Navbar = () => {
     const linkeStyle = 'hover:text-gray-light hover:underline underline-offset-4'
     const t = useTranslations("Navbar");
 
-
+    const router = useRouter()
     
     useEffect(() => {
         window.addEventListener('scroll', handleScroll, { passive: true });
@@ -78,24 +78,22 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link
-                            href={{pathname:"/home", hash:"projects"}}
-                            as={{pathname:"/home", hash:"projects"}}
-                            replace={true}
+                        <button
+                            onClick={()=>router.push("/home#projects")}
                             className={linkeStyle}>
+                            
                             {t("works")}
-                        </Link>
+                        </button>
                     </li>
                     <li>
-                        <Link 
-                            href={{pathname:"/home", hash:"social-contacts"}}
-                            as={{pathname:"/home", hash:"social-contacts"}}
-                            replace={true}
+                        <button 
+                            
+                            onClick={()=>router.push("/home#social-contacts")}
 
                             className={linkeStyle}>
                             {t("contact")}
 
-                        </Link>
+                        </button>
                     </li>
                 </ul>
             </nav>
