@@ -69,6 +69,7 @@ const Navbar = () => {
                     <li>
                         <Link 
                             href='/posts'
+                            passHref
                             about='my articles'
                             className={linkeStyle}>
                             {t("articles")}
@@ -78,6 +79,7 @@ const Navbar = () => {
                         <Link
                             href="/[id]"
                             as="/#projects"
+                            passHref
                             about='my personal projects'
                             className={linkeStyle}>
                            {t("works")}
@@ -86,6 +88,7 @@ const Navbar = () => {
                     <li>
                         <Link href="/[id]"
                         as="/#social-contacts"
+                        passHref
                             about='my personal contacts'
                             className={linkeStyle}>
                         
