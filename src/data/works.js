@@ -1,6 +1,15 @@
 
 export const storeCards = [
     {
+        id: 111,
+        Title: "M & M",
+        img: 'lawyerweb.png',
+        description: "A demo landing-page for a law firm or laywer.",
+        stacks:['Next.js', 'javascript', 'Typescript', 'TailwindCss'],
+        demo: 'https://calm-sfogliatella-7dcffc.netlify.app/',
+        code:'https://github.com/Gondrak08/lawyer-demo',
+    },
+    {
         id: 0,
         Title: "Furniture Store",
         img: 'furniturestore.png',

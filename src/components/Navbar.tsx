@@ -83,7 +83,6 @@ const Navbar = () => {
                     <li>
                         <a href='/#social-contact'>
                             {t("contact")}
-
                         </a>
                         {/* <Link 
                             href={{pathname:"/", hash:"social-contact"}}
