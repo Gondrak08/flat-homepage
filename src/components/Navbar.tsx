@@ -96,6 +96,6 @@ const Navbar = () => {
             </nav>
         </section>
     )
-}
+};
 
 export default Navbar;
