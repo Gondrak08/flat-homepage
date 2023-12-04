@@ -42,7 +42,6 @@ const Navbar = () => {
             md:justify-center 
             gap-10
             md:gap-20 
-            py-2 
             transition-all 
             duration-500
             '
