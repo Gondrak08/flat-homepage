@@ -19,7 +19,8 @@
         "button":"Leia mais..."
     },
     "Projects":{
-        "title":"Projetos"
+        "title one":"Projetos",
+        "title two":"Colaborações"
     },
     "Articles":{
         "title":"Artigos"
