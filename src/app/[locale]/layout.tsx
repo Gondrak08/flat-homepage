@@ -12,13 +12,13 @@ import Header from '@/components/Header';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Flat-co',
+  title: 'Vitor Alecrim Homepage',
   description: 'created by @VitorAlecrim',
   openGraph: {
-    title: 'Flat-co',
+    title: 'Vitor Alecrim Homepage',
     description: 'Vitor Alecrim personal Website',
-    url: 'https://flat-co.netlify.app/',
-    siteName: 'Flat-co',
+    url: 'https://craftz-vitor.netlify.app/',
+    siteName: 'Vitor Alecrim Homepage',
     images: [
       {
         url: '../logo.gif',
