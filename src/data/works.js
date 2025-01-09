@@ -1,12 +1,22 @@
 export const Works = [
   {
+    id: 0,
+    Title: "JP Credito e Seguros",
+    img: "jpgcreditoseguro.png",
+    description:
+      "An authentication platform that enables clients to securely connect with two government systems and submit their documents for credit profile analysis.",
+    stacks: [],
+    demo: "https://jpcreditoeseguros.pt/obrigadochabitacao/",
+    code: "",
+  },
+  {
     id: 1,
     Title: "Licita Connect",
     img: "licitaconnect.png",
     description:
       "A An auction platform website for public bidding, designed for municipalities in Brazil",
     stacks: [],
-    demo: "http://sistema.licitaconnect.com.br/",
+    demo: "http://www.licitaconnect.com.br/",
     code: "",
   },
   {
