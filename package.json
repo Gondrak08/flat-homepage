@@ -4,7 +4,7 @@
   "description": "vitor website",
   "private": true,
   "license": "ISC",
-  "author": "Vitor Alecrim<flat-co.netlify.app>",
+  "author": "Vitor Alecrim<craftz-vitor.netlify.app>",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
