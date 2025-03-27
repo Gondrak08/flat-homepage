@@ -61,7 +61,10 @@ export default async function RootLayout({
              items-center justify-between `}
             >
               {children}
-              <GoogleAnalytics GA_MEASUREMENT_ID="G-6G0KDKJTWW " />
+              <GoogleAnalytics
+                GA_MEASUREMENT_ID="G-6G0KDKJTWW"
+                GTM_ID="GTM-KWWV6FRX"
+              />
             </main>
           </GlobalContextProvider>
         </NextIntlClientProvider>
